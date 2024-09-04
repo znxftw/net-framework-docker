@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerApp", "DockerApp\DockerApp.csproj", "{584EC9F5-9ADF-40DA-A5CB-7132CD6FD875}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerApp.Test", "DockerApp.Test\DockerApp.Test.csproj", "{C3F2163A-9C23-4B23-8EB1-EFC512835AC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{584EC9F5-9ADF-40DA-A5CB-7132CD6FD875}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{584EC9F5-9ADF-40DA-A5CB-7132CD6FD875}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{584EC9F5-9ADF-40DA-A5CB-7132CD6FD875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3F2163A-9C23-4B23-8EB1-EFC512835AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3F2163A-9C23-4B23-8EB1-EFC512835AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3F2163A-9C23-4B23-8EB1-EFC512835AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3F2163A-9C23-4B23-8EB1-EFC512835AC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
