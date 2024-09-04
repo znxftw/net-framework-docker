@@ -1,0 +1,33 @@
+name: dotnet-framework-docker-build
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build-and-test:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build & Test
+        run: |
+          docker build -f Dockerfile -t dockerapp .
+
+      - name: Extract Coverage Artifact
+        run: |
+          docker create --name dockerapp-container dockerapp
+          docker cp dockerapp-container:C:/reports/ c:/coverage/
+
+      - name: Cleanup docker daemon
+        if: always()
+        run: |
+          docker container prune -f
+          docker image prune -f
+
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: c:/coverage/
