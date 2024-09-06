@@ -6,8 +6,8 @@ RUN dotnet tool install --global dotnet-reportgenerator-globaltool
 COPY . .
 RUN nuget restore
 
-# Build
-RUN msbuild "./DockerApp/DockerApp.csproj"
+# Build Project
+RUN msbuild "./DockerApp/DockerApp.csproj" /p:Configuration=Release
 
 # Test & Collect Coverage
 RUN msbuild "./DockerApp.Test/DockerApp.Test.csproj"
